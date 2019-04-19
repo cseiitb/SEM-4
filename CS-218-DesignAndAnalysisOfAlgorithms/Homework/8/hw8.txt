@@ -1,0 +1,29 @@
+due April 4, Monday
+
+1.  Write a program to solve problem 1 of Quiz 3.  You should
+implement a dynamic programming solution.  You may memoize or do a
+bottom up solution.
+
+tspassignment.cpp in this directory gives a code fragment that you
+should use.  This enables you to read in the points graphically, and
+sets up the distance matrix.  At the end there is code which shows how
+to draw lines to show the path you will find.  Use only 10 points,
+since the time taken increases exponentially.
+
+The shortest path between the second last and last points is to be
+found, passing exactly once through all other points.
+
+2.  Consider problem 2 of Chapter 8 of KT.  Show that diverse subset
+reduces to Independent Set.
+
+3.  A subset E' of edges in a graph is said to be a matching if no two
+edges in E' is incident on the same vertex.  Write an ILP to determine
+the maximum matching in a graph, i.e. a matching of maximum size.
+
+4.  Let u,v denote the values at the inputs and w the value at the
+outputs of an OR gate.  Derive a CNF formula that is true iff w is the
+OR of u,v.
+
+------
+
+

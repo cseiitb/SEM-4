@@ -1,0 +1,23 @@
+Due Monday, March 14 in class.
+
+1.  Problem 1 of Ch 6 of KT.
+
+2.  Problem 4 of Ch 6 of KT.
+
+3.  Problem 8 of Ch 6 of KT.
+
+4.  Problem 19 of Ch 6 of KT.
+
+Your writeup should generally have the following form:
+
+* A recurrence describing the cost.  State which value you are finally
+  interested in.  The base cases.  Clearly explain the notation.
+
+* A justification for the recurrence (proof)
+
+* Analysis of the time taken to solve the recurrence.
+
+* Description of how you would find the optimal solution and not just
+  its cost/benefit.
+
+Do NOT submit a recursive algorithm.

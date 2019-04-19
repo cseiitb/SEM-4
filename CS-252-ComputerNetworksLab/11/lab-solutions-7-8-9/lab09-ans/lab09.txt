@@ -1,0 +1,67 @@
+
+Question 1: NS2 based TCP
+
+1. Ideal Throughput is 800kbps. TCP Tahoe managed to send 1657 segments in 20 sec, leading to a throughput of 663kbs and an utilization of 82.8%. TCP Reno managed to send 1836 segments in 20 sec leading to a throughput of 734kbps and an utilization of 91.8%
+
+Rest: The figures are in the directory (borrowed without permission from a student in class :-)
+
+Explanation:
+CWND: intially in both reno and tahoe, during the slowstart phase, both overestimate cwnd and shoot upto 50 thereby experiencing many losses. After that both stabilize to a cwnd of around 25. Soon after the windows hits 25, there is a loss. In case of Tahoe, it brings cwnd all the way down to 1 and then does slow start till 12/13 and then AIMD. In case of Reno, AIMD is in action and cwnd is never got down to 1. This explains the better performance of Reno over Tahoe.
+
+Throughput: In TCP Reno barring the initial phase, the throughput stabilizes around 800kbps, dipping to ~700kbps after a loss. But in Tahoe, after every loss, the throughput falls to 200kbps and the duration of this low throughput is also higher. This is because the timeout empties the pipe and throughput suffers during this period.
+
+
+
+--------------------------------
+Question 2: Real-life TCP
+
+
+1)
+	A TCP connection starts with a SYN a.k.a SIN and according to the bible so did the world i.e. Adam's and
+	Eve's SYN of eating the forbidden fruit.
+	TCP has a proper handshake, hence is more welcome ;-)
+
+2)
+	Source IP - 10.105.11.50
+	Destination IP - 10.99.99.5
+	Source Port = 37212
+	Destination Port = 80
+
+	Sender Side Initial Sequence number = 0x29c7bb87
+	Receive Side Initial Sequence number = 0x05466ec1
+
+3)
+	HTTP request message
+	POST /repository/repository_ajax.php HTTP/1.1
+	From following the TCP stream we figured out the http message.
+
+
+Given the TCP segmentation offloading, below questions are all a bit off. Will be based on your specific trace.
+
+4)
+	The initial window size is ? (how many every bytes were sent before sender received the first ack)
+
+5)
+	The ACKs generated don't follow the message boundaries. At times we get ACK numbers that are smaller
+	then the sequence number of the packet sent out(instead of being equal to),
+	and some times we get ACK numbers that acks data from two different packets.
+	The former is likely a consequence of TCP segment offloading
+	The later that of ACK'ing two packets is an optimisation to decreases protocol overhead.
+
+6)
+	Minimum TCP segment size is ? bytes corresponding to an ACK sent by our computer.
+	Maximum TCP segment size is ? bytes
+
+7)
+	The intial receiver window size was 14480 bytes.We figured this out by looking at the value corresponding to 
+	the window size in the SYN ACK packet in the tcp handshake.
+	The pecularity that we had observed was that the receiver window size is continuously increasing instead of decreasing
+	on receiveing more data.
+	The reason for this could be as the sender is continuously sending data the receiver decides to allocate more resources
+	for this connection and hence increases the window size.
+
+8)
+	The server at moodle.iitb.ac.in initiates the closing connection.
+	The first fin was sent from IP address of moodle.iitb.ac.in and the HTTP port
+
+

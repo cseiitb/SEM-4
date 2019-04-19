@@ -1,0 +1,11 @@
+Due Feb 18
+
+KT Problem 4.15  "The manager of a large..."
+
+KT Problem 4.21  "Let us say that a graph G..."  (Hint: Try first for
+a graph that has exactly n edges.)
+
+KT Problem 4.25  "Suppose we are given a set of points.."
+
+KT Problem 4.28  "Suppose you are a consultant..."  (It might help to
+solve problem 4.27 first for inspiration -- but do not submit that)

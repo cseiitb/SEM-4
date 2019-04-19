@@ -1,0 +1,35 @@
+Due on 14/1/16 in class
+
+1.  Show that the sum of i^3log i summed from i=1 to i=n is
+    theta(n^4 log n).
+
+2.  Consider the sum S(n) of a geometric series
+
+    S(n) =  a + ar + ar^2 + ... + ar^{n-1}
+
+    Show that if r<1, then S(n)=theta(F), if r>1, then S(n)=theta(L),
+    where F=a and L=ar^{n-1} are the first and the last terms of the
+    series.  Assume a,r are constants, i.e. independent of n.
+
+3.  An example of divide and conquer is binary search.  You have seen
+    how to use binary search to search in a sorted array.  Here is
+    another problem where it is useful.  Suppose you are given in
+    clockwise order the vertices p_1, p_2, ..., p_n of a convex
+    polygon P.  You are also given another point q and you want to
+    determine whether q lies inside P.  Show that this can be done in
+    O(log n) time.
+
+    For this you may note that if a convex polygon is partitioned by a
+    straight line both parts remain convex.  You can prove this (but
+    are not required to do so) using the definition of convexity: a
+    set is convex if the straight line joining any two points in the
+    set is contained in the set.
+
+4.  Write a program to read n pairs of numbers with arbitrary number
+    of digits and print their products.  Your input file should have n
+    on the first line, and each number on a new line, for a total of
+    2n+1 lines.  You should print the products, each on a separate
+    line (do not print n).  Instructions for submitting the program
+    will be given soon.
+
+-------

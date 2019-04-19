@@ -1,0 +1,8 @@
+$hostname				#hostname
+$ifconfig eth1			# inet addr shows machines IP
+$route					# next hop ip
+$arp					# for MAC address
+$ nano /etc/resolv.conf	# for local DNS server name and ip
+$ nano /etc/services	# for port numbers
+$ tcpdump host www.iitb.ac.in -w /opt/labuser/Desktop/trace.pcap	# to create the trace file
+$ ping -c 1 iitb.ac.in 	# to transmit 1 ICMP packet
